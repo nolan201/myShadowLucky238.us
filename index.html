@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,10 +28,12 @@
 
         .wrapper {
             width: 850px;
+            max-width: 100%;
             background-color: #000;
             border: 1px solid #333;
             box-shadow: 0 0 25px rgba(0,0,0,0.9);
             position: relative;
+            overflow-x: hidden;
         }
 
         /* DYNAMIC AD BANNER SYSTEM */
@@ -56,9 +58,9 @@
             color: #fff;
         }
 
-            .ad-slide.active {
-                display: flex;
-            }
+        .ad-slide.active {
+            display: flex;
+        }
 
         .ad-bg-video {
             position: absolute;
@@ -114,6 +116,7 @@
             border: 2px outset #ff6666;
             text-transform: uppercase;
             box-shadow: 2px 2px 5px #000;
+            white-space: nowrap;
         }
 
         /* AD 2: SUB GOAL COUNTER WITH VIDEO BG */
@@ -149,6 +152,7 @@
 
         .progress-bar-container {
             width: 320px;
+            max-width: 100%;
             height: 20px;
             background-color: #222;
             border: 2px solid #fff;
@@ -245,17 +249,9 @@
         }
 
         @keyframes spinWow {
-            0% {
-                transform: rotate(0deg) scale(1);
-            }
-
-            50% {
-                transform: rotate(180deg) scale(1.2);
-            }
-
-            100% {
-                transform: rotate(360deg) scale(1);
-            }
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.2); }
+            100% { transform: rotate(360deg) scale(1); }
         }
 
         /* ADVERTISING TAG */
@@ -289,10 +285,10 @@
             font-weight: bold;
         }
 
-            .header-top a {
-                color: #000;
-                text-decoration: none;
-            }
+        .header-top a {
+            color: #000;
+            text-decoration: none;
+        }
 
         .header-main {
             display: flex;
@@ -308,10 +304,10 @@
             line-height: 1;
         }
 
-            .logo span {
-                font-size: 44px;
-                text-transform: uppercase;
-            }
+        .logo span {
+            font-size: 44px;
+            text-transform: uppercase;
+        }
 
         .tagline {
             font-size: 12px;
@@ -326,12 +322,12 @@
             gap: 4px;
         }
 
-            .search-box input[type="text"] {
-                width: 240px;
-                padding: 4px 6px;
-                border: 1px solid #777;
-                background-color: #fff;
-            }
+        .search-box input[type="text"] {
+            width: 240px;
+            padding: 4px 6px;
+            border: 1px solid #777;
+            background-color: #fff;
+        }
 
         .search-btn {
             background-color: #000;
@@ -369,11 +365,11 @@
             overflow: hidden;
         }
 
-            .profile-pic-container img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+        .profile-pic-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         .sub-links {
             margin-top: 6px;
@@ -382,10 +378,10 @@
             text-align: center;
         }
 
-            .sub-links a {
-                color: #888;
-                text-decoration: none;
-            }
+        .sub-links a {
+            color: #888;
+            text-decoration: none;
+        }
 
         .profile-info {
             flex: 1;
@@ -431,15 +427,15 @@
             margin-top: 5px;
         }
 
-            .stats p {
-                margin-bottom: 4px;
-            }
+        .stats p {
+            margin-bottom: 4px;
+        }
 
-            .stats strong {
-                color: #fff;
-                text-transform: uppercase;
-                font-weight: bold;
-            }
+        .stats strong {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
 
         /* COLLAGE SECTION */
         .collage-section {
@@ -457,12 +453,12 @@
             background-color: #111;
         }
 
-            .cutout img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-            }
+        .cutout img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
         .caption {
             position: absolute;
@@ -482,7 +478,6 @@
             border: 1px solid #fff;
         }
 
-        /* WIDESCREEN YOUTUBE 16:9 FORMAT FOR GOLF SELFIE */
         .cutout-beanie {
             top: 25px;
             right: 20px;
@@ -492,7 +487,6 @@
             border: 2px solid red;
         }
 
-        /* WIDESCREEN YOUTUBE 16:9 FORMAT FOR AIR BRO */
         .cutout-skate {
             top: 230px;
             left: 20px;
@@ -502,7 +496,6 @@
             border: 1px solid #a0a0a0;
         }
 
-        /* ENLARGED & LOWERED CENTER IMAGE */
         .cutout-armor {
             top: 110px;
             left: 195px;
@@ -541,7 +534,6 @@
             background-color: #fff;
         }
 
-        /* MOVED SMOKIN AND LUST STICKERS A BIT LEFT */
         .sticker-smokin {
             position: absolute;
             top: 85px;
@@ -587,9 +579,9 @@
             margin-bottom: 18px;
         }
 
-            .bio-group:last-child {
-                margin-bottom: 0;
-            }
+        .bio-group:last-child {
+            margin-bottom: 0;
+        }
 
         .bio-title {
             font-size: 20px;
@@ -612,16 +604,17 @@
             background-color: #000;
             border: 2px solid red;
             width: 300px;
+            max-width: 100%;
         }
 
-            .twaughthammer-container h3 {
-                font-size: 11px;
-                font-weight: 900;
-                font-family: Impact, sans-serif;
-                color: red;
-                text-transform: uppercase;
-                margin-bottom: 4px;
-            }
+        .twaughthammer-container h3 {
+            font-size: 11px;
+            font-weight: 900;
+            font-family: Impact, sans-serif;
+            color: red;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
 
         audio {
             width: 100%;
@@ -648,11 +641,11 @@
             display: inline-block;
         }
 
-            .footer-title span {
-                background-color: #fff;
-                color: #000;
-                padding: 0 8px;
-            }
+        .footer-title span {
+            background-color: #fff;
+            color: #000;
+            padding: 0 8px;
+        }
 
         .video-box {
             width: 100%;
@@ -702,16 +695,200 @@
             cursor: pointer;
         }
 
-            .yt-sub-btn:hover {
-                background: linear-gradient(to bottom, #f0f0f0 0%, #d9d9d9 50%, #bfbfbf 100%);
-                color: #000;
-            }
+        .yt-sub-btn:hover {
+            background: linear-gradient(to bottom, #f0f0f0 0%, #d9d9d9 50%, #bfbfbf 100%);
+            color: #000;
+        }
 
         .yt-icon-svg {
             height: 20px;
             width: 28px;
             display: block;
             filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.3));
+        }
+
+        /* RESPONSIVE MOBILE STYLES */
+        @media (max-width: 850px) {
+            body {
+                padding-bottom: 0;
+            }
+
+            .wrapper {
+                width: 100%;
+                border: none;
+            }
+
+            /* AD BANNERS */
+            .top-ad-container {
+                height: 110px;
+            }
+
+            .ad1-content, .ad2-content, .ad3-content {
+                flex-direction: column;
+                justify-content: center;
+                gap: 6px;
+                text-align: center;
+            }
+
+            .ad1-text h2 {
+                font-size: 16px;
+            }
+
+            .ad1-text p {
+                font-size: 10px;
+            }
+
+            .ad-btn-retro {
+                font-size: 11px;
+                padding: 4px 10px;
+            }
+
+            .sub-goal-title {
+                font-size: 15px;
+            }
+
+            .progress-bar-container {
+                width: 240px;
+                height: 16px;
+            }
+
+            .progress-text {
+                font-size: 9px;
+            }
+
+            .ad3-title {
+                font-size: 15px;
+            }
+
+            .wow-text {
+                font-size: 14px;
+                padding: 1px 5px;
+            }
+
+            /* HEADER */
+            .header-main {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .logo {
+                font-size: 26px;
+            }
+
+            .logo span {
+                font-size: 28px;
+            }
+
+            .search-box {
+                width: 100%;
+                align-items: stretch;
+            }
+
+            .search-box input[type="text"] {
+                width: 100%;
+            }
+
+            /* PROFILE HEADER */
+            .profile-header {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+                gap: 15px;
+            }
+
+            .profile-pic-side {
+                width: 100%;
+                align-items: center;
+            }
+
+            .profile-pic-container {
+                width: 180px;
+                height: 150px;
+            }
+
+            .name-titles {
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .krystal-ship-text {
+                font-size: 32px;
+                text-align: center;
+            }
+
+            .capn-cooks-text {
+                font-size: 45px;
+                top: 10px;
+                right: 50%;
+                transform: translateX(50%) rotate(-4deg);
+            }
+
+            .stats {
+                text-align: center;
+                font-size: 12px;
+            }
+
+            /* COLLAGE SECTION */
+            .collage-section {
+                height: auto;
+                min-height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 30px 10px;
+            }
+
+            .cutout {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                transform: none !important;
+                max-width: 90% !important;
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .cutout img {
+                width: 100%;
+                height: auto;
+            }
+
+            .cutout-armor {
+                order: 1;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            .cutout-ladies { order: 2; }
+            .cutout-beanie { order: 3; }
+            .cutout-skate { order: 4; }
+            .cutout-couch { order: 5; }
+            .cutout-fenix { order: 6; }
+            .cutout-sketch { order: 7; }
+
+            .sticker-smokin, .sticker-lust {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                transform: none !important;
+                margin: 5px 0;
+            }
+
+            .sticker-smokin { order: 1; }
+            .sticker-lust { order: 8; }
+
+            /* FOOTER */
+            .footer-title {
+                font-size: 32px;
+            }
+
+            .video-box {
+                height: 220px;
+            }
         }
     </style>
 </head>
