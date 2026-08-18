@@ -1,0 +1,996 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myShadowLucky238.COM - Cap'n Cook's Krystal Ship</title>
+
+    <!-- WEBSITE FAVICON / TAB LOGO -->
+    <link rel="icon" type="image/png" href="https://files.catbox.moe/9cs870.png">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 50px;
+        }
+
+        .wrapper {
+            width: 850px;
+            background-color: #000;
+            border: 1px solid #333;
+            box-shadow: 0 0 25px rgba(0,0,0,0.9);
+            position: relative;
+        }
+
+        /* DYNAMIC AD BANNER SYSTEM */
+        .top-ad-container {
+            position: relative;
+            width: 100%;
+            height: 95px;
+            background: #111;
+            border-bottom: 2px solid #555;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .ad-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            text-decoration: none;
+            color: #fff;
+        }
+
+            .ad-slide.active {
+                display: flex;
+            }
+
+        .ad-bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            opacity: 0.45;
+            border: none;
+        }
+
+        /* AD 1: ULTIMATE CLIPS & HIGHLIGHTS */
+        .ad-1 {
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #0d001a;
+        }
+
+        .ad1-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .ad1-text h2 {
+            font-family: Impact, sans-serif;
+            font-size: 24px;
+            color: #00ffff;
+            text-shadow: 2px 2px #ff007f;
+            letter-spacing: 1px;
+        }
+
+        .ad1-text p {
+            font-size: 12px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .ad-btn-retro {
+            background: linear-gradient(to bottom, #ff3300, #990000);
+            color: #fff;
+            font-weight: 900;
+            font-size: 13px;
+            padding: 8px 15px;
+            border: 2px outset #ff6666;
+            text-transform: uppercase;
+            box-shadow: 2px 2px 5px #000;
+        }
+
+        /* AD 2: SUB GOAL COUNTER WITH VIDEO BG */
+        .ad-2 {
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 20px;
+            background: #000;
+        }
+
+        .ad2-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sub-goal-box {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .sub-goal-title {
+            font-family: Impact, sans-serif;
+            font-size: 20px;
+            color: #00ffcc;
+            text-shadow: 2px 2px #000;
+        }
+
+        .progress-bar-container {
+            width: 320px;
+            height: 20px;
+            background-color: #222;
+            border: 2px solid #fff;
+            position: relative;
+            box-shadow: inset 0 0 5px #000;
+        }
+
+        .progress-bar-fill {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(to right, #ff0000, #ffcc00);
+            transition: width 0.4s ease-in-out;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 11px;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .sub-public-note {
+            font-size: 10px;
+            color: #ffe600;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #000;
+            margin-top: 3px;
+        }
+
+        /* AD 3: SHOUT-OUT SPOTLIGHT WITH ROTATING WOW */
+        .ad-3 {
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #1a0000;
+        }
+
+        .ad3-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .ad3-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ad3-badge {
+            background-color: #ffe600;
+            color: #000;
+            font-weight: 900;
+            font-size: 11px;
+            padding: 2px 6px;
+            width: fit-content;
+            margin-bottom: 3px;
+        }
+
+        .ad3-title-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ad3-title {
+            font-family: Impact, sans-serif;
+            font-size: 22px;
+            color: #fff;
+            text-shadow: 2px 2px red;
+        }
+
+        .wow-text {
+            font-family: Impact, Arial Black, sans-serif;
+            font-size: 20px;
+            color: #ffe600;
+            background: #ff0000;
+            padding: 2px 8px;
+            border: 2px solid #fff;
+            box-shadow: 2px 2px 0px #000;
+            animation: spinWow 2s infinite linear;
+            display: inline-block;
+        }
+
+        @keyframes spinWow {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(180deg) scale(1.2);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        /* ADVERTISING TAG */
+        .ad-tag {
+            position: absolute;
+            bottom: 2px;
+            right: 5px;
+            font-size: 9px;
+            color: #aaa;
+            background: rgba(0,0,0,0.7);
+            padding: 1px 4px;
+            z-index: 10;
+            border: 1px solid #444;
+        }
+
+        /* HEADER & SEARCH */
+        .header {
+            background-color: #ffe600;
+            color: #000;
+            padding: 10px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+            .header-top a {
+                color: #000;
+                text-decoration: none;
+            }
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .logo {
+            font-size: 38px;
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: -1.5px;
+            line-height: 1;
+        }
+
+            .logo span {
+                font-size: 44px;
+                text-transform: uppercase;
+            }
+
+        .tagline {
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 2px;
+        }
+
+        .search-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 4px;
+        }
+
+            .search-box input[type="text"] {
+                width: 240px;
+                padding: 4px 6px;
+                border: 1px solid #777;
+                background-color: #fff;
+            }
+
+        .search-btn {
+            background-color: #000;
+            color: #ffe600;
+            font-weight: bold;
+            font-size: 11px;
+            padding: 4px 14px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* PROFILE HEADER CARD */
+        .profile-header {
+            background-color: #000;
+            border-bottom: 3px solid #ffe600;
+            display: flex;
+            padding: 15px;
+            gap: 20px;
+            position: relative;
+            min-height: 230px;
+        }
+
+        .profile-pic-side {
+            width: 220px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-pic-container {
+            width: 220px;
+            height: 180px;
+            border: 1px solid #666;
+            background-color: #111;
+            overflow: hidden;
+        }
+
+            .profile-pic-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .sub-links {
+            margin-top: 6px;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+            .sub-links a {
+                color: #888;
+                text-decoration: none;
+            }
+
+        .profile-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .name-titles {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .krystal-ship-text {
+            font-size: 42px;
+            font-weight: 900;
+            font-family: Impact, Arial Black, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            line-height: 1.1;
+            text-align: right;
+        }
+
+        .capn-cooks-text {
+            font-family: 'Reenie Beanie', cursive, sans-serif;
+            font-size: 65px;
+            color: #fff;
+            position: absolute;
+            top: 22px;
+            right: 110px;
+            transform: rotate(-4deg);
+            white-space: nowrap;
+            z-index: 2;
+        }
+
+        .stats {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-top: 5px;
+        }
+
+            .stats p {
+                margin-bottom: 4px;
+            }
+
+            .stats strong {
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+        /* COLLAGE SECTION */
+        .collage-section {
+            position: relative;
+            height: 950px;
+            width: 100%;
+            overflow: hidden;
+            background-color: #000;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 100 100'%3E%3Cg fill='%232e7d32' fill-opacity='0.22'%3E%3Cpath d='M50 5 L53 35 L65 15 L58 40 L80 25 L65 48 L95 45 L68 56 L90 70 L60 62 L70 88 L54 68 L50 95 L46 68 L30 88 L40 62 L10 70 L32 56 L5 45 L35 48 L20 25 L42 40 L35 15 L47 35 Z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .cutout {
+            position: absolute;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+            background-color: #111;
+        }
+
+            .cutout img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+        .caption {
+            position: absolute;
+            font-size: 11px;
+            color: #ffe600;
+            font-weight: bold;
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        .cutout-ladies {
+            top: 30px;
+            left: 30px;
+            width: 220px;
+            height: 160px;
+            transform: rotate(-8deg);
+            border: 1px solid #fff;
+        }
+
+        /* WIDESCREEN YOUTUBE 16:9 FORMAT FOR GOLF SELFIE */
+        .cutout-beanie {
+            top: 25px;
+            right: 20px;
+            width: 280px;
+            height: 157px;
+            transform: rotate(5deg);
+            border: 2px solid red;
+        }
+
+        /* WIDESCREEN YOUTUBE 16:9 FORMAT FOR AIR BRO */
+        .cutout-skate {
+            top: 230px;
+            left: 20px;
+            width: 280px;
+            height: 157px;
+            transform: rotate(-10deg);
+            border: 1px solid #a0a0a0;
+        }
+
+        /* ENLARGED & LOWERED CENTER IMAGE */
+        .cutout-armor {
+            top: 110px;
+            left: 195px;
+            width: 420px;
+            height: 690px;
+            z-index: 5;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .cutout-couch {
+            top: 250px;
+            right: 20px;
+            width: 220px;
+            height: 160px;
+            transform: rotate(6deg);
+            border: 1px solid #fff;
+        }
+
+        .cutout-fenix {
+            top: 460px;
+            right: 25px;
+            width: 230px;
+            height: 170px;
+            transform: rotate(-4deg);
+            border: 1px solid #fff;
+        }
+
+        .cutout-sketch {
+            top: 480px;
+            left: 30px;
+            width: 220px;
+            height: 280px;
+            transform: rotate(12deg);
+            border: 2px solid red;
+            background-color: #fff;
+        }
+
+        /* MOVED SMOKIN AND LUST STICKERS A BIT LEFT */
+        .sticker-smokin {
+            position: absolute;
+            top: 85px;
+            left: 280px;
+            background-color: #000;
+            color: #fff;
+            font-size: 38px;
+            font-weight: 900;
+            font-family: Impact, Arial Black, sans-serif;
+            padding: 0 10px;
+            transform: rotate(-4deg);
+            z-index: 8;
+            letter-spacing: 1px;
+            border: 1px solid #333;
+        }
+
+        .sticker-lust {
+            position: absolute;
+            top: 640px;
+            right: 210px;
+            background-color: #000;
+            color: #fff;
+            font-size: 38px;
+            font-weight: 900;
+            font-family: Impact, Arial Black, sans-serif;
+            padding: 0 12px;
+            transform: rotate(3deg);
+            z-index: 8;
+            letter-spacing: 1px;
+            border: 1px solid #333;
+        }
+
+        /* BIO SECTION */
+        .bio-section {
+            background-color: #ffe600;
+            color: #000;
+            padding: 20px;
+            border-top: 4px solid #000;
+            border-bottom: 4px solid #000;
+        }
+
+        .bio-group {
+            margin-bottom: 18px;
+        }
+
+            .bio-group:last-child {
+                margin-bottom: 0;
+            }
+
+        .bio-title {
+            font-size: 20px;
+            font-weight: 900;
+            font-family: Impact, Arial Black, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .bio-text {
+            font-size: 15px;
+            line-height: 1.4;
+            font-weight: bold;
+        }
+
+        .twaughthammer-container {
+            margin-top: 12px;
+            padding: 8px;
+            background-color: #000;
+            border: 2px solid red;
+            width: 300px;
+        }
+
+            .twaughthammer-container h3 {
+                font-size: 11px;
+                font-weight: 900;
+                font-family: Impact, sans-serif;
+                color: red;
+                text-transform: uppercase;
+                margin-bottom: 4px;
+            }
+
+        audio {
+            width: 100%;
+            height: 30px;
+        }
+
+        /* FOOTER */
+        .footer-section {
+            padding: 30px 20px 40px 20px;
+            text-align: center;
+            background-color: #000;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 100 100'%3E%3Cg fill='%231b5e20' fill-opacity='0.25'%3E%3Cpath d='M50 5 L53 35 L65 15 L58 40 L80 25 L65 48 L95 45 L68 56 L90 70 L60 62 L70 88 L54 68 L50 95 L46 68 L30 88 L40 62 L10 70 L32 56 L5 45 L35 48 L20 25 L42 40 L35 15 L47 35 Z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .footer-title {
+            font-size: 50px;
+            font-weight: 900;
+            font-family: Impact, Arial Black, sans-serif;
+            color: #fff;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transform: rotate(-2deg);
+            display: inline-block;
+        }
+
+            .footer-title span {
+                background-color: #fff;
+                color: #000;
+                padding: 0 8px;
+            }
+
+        .video-box {
+            width: 100%;
+            max-width: 620px;
+            height: 380px;
+            margin: 0 auto;
+            border: 4px solid #fff;
+            background-color: #111;
+            box-shadow: 0 0 20px rgba(0,0,0,0.9);
+            overflow: hidden;
+        }
+
+        .video-note {
+            margin-top: 14px;
+            font-size: 14px;
+            font-style: italic;
+            color: #ffe600;
+            font-weight: bold;
+        }
+
+        .sub-button-container {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .yt-sub-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 14px 5px 10px;
+            background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 50%, #cccccc 100%);
+            border: 1px solid #888;
+            border-top-color: #fff;
+            border-left-color: #fff;
+            border-bottom-color: #555;
+            border-right-color: #555;
+            border-radius: 3px;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.5), inset 0 1px 0 #fff;
+            text-decoration: none;
+            color: #333;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            text-shadow: 0 1px 0 #fff;
+            transition: all 0.1s ease-in-out;
+            cursor: pointer;
+        }
+
+            .yt-sub-btn:hover {
+                background: linear-gradient(to bottom, #f0f0f0 0%, #d9d9d9 50%, #bfbfbf 100%);
+                color: #000;
+            }
+
+        .yt-icon-svg {
+            height: 20px;
+            width: 28px;
+            display: block;
+            filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.3));
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <!-- LOCAL HTML5 VIDEO AD BANNER SYSTEM -->
+        <div class="top-ad-container">
+            <div class="ad-tag">Advertisment cuz idk what else to add</div>
+
+            <!-- AD 1 -->
+            <a href="https://www.youtube.com/@ShadowLucky238?sub_confirmation=1" target="_blank" class="ad-slide ad-1">
+                <video class="ad-bg-video" autoplay muted loop playsinline>
+                    <source src="https://files.catbox.moe/324ya6.mp4" type="video/mp4">
+                </video>
+                <div class="ad1-content">
+                    <div class="ad1-text">
+                        <h2>ULTIMATE GAMING CLIPS & HIGHLIGHTS!</h2>
+                        <p>Rexuiz FPS, COD Zombies & Crazy Plays on YouTube!</p>
+                    </div>
+                    <div class="ad-btn-retro">WATCH THE MADNESS ►</div>
+                </div>
+            </a>
+
+            <!-- AD 2 -->
+            <a href="https://www.youtube.com/@ShadowLucky238?sub_confirmation=1" target="_blank" class="ad-slide ad-2">
+                <video class="ad-bg-video" autoplay muted loop playsinline>
+                    <source src="https://files.catbox.moe/ywc81s.mp4" type="video/mp4">
+                </video>
+                <div class="ad2-content">
+                    <div class="sub-goal-box">
+                        <div class="sub-goal-title" id="subGoalTitle">ROAD TO 500 SUBSCRIBERS!</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" id="progressBarFill"></div>
+                            <div class="progress-text" id="progressText">GOAL: 330 / 500 SUBS REACHED!</div>
+                        </div>
+                    </div>
+                    <div class="ad-btn-retro" id="subGoalBtn" style="background: linear-gradient(to bottom, #00ffcc, #008866); color: #000; border-color: #00ffff;">HELP REACH 500 ►</div>
+                </div>
+            </a>
+
+            <!-- AD 3 -->
+            <a href="https://www.youtube.com/@ShadowLucky238?sub_confirmation=1" target="_blank" class="ad-slide ad-3">
+                <video class="ad-bg-video" autoplay muted loop playsinline>
+                    <source src="https://files.catbox.moe/zf4z8i.mp4" type="video/mp4">
+                </video>
+                <div class="ad3-content">
+                    <div class="ad3-text">
+                        <div class="ad3-badge">★ EXCLUSIVE SUBSCRIPTION UNLOCK ★</div>
+                        <div class="ad3-title-container">
+                            <div class="ad3-title">SUBSCRIBE = GET A SHOUT ON THIS WEBSITE!</div>
+                            <div class="wow-text">WOW!</div>
+                        </div>
+                        <div class="sub-public-note">💡 Make sure your subscriptions are set to <b>PUBLIC</b> so I can put you on the site!</div>
+                    </div>
+                    <div class="ad-btn-retro" style="background: linear-gradient(to bottom, #ffe600, #ff9900); color: #000; border-color: #ffff00;">SUBSCRIBE NOW ►</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-top">
+                <a href="#">JOIN</a> | <a href="#">LOG IN</a> | <a href="#">ABOUT</a>
+            </div>
+            <div class="header-main">
+                <div>
+                    <div class="logo">my<span>SHADOWLUCKY238</span>.YO 📢</div>
+                    <div class="tagline">Get yo ass on the web.</div>
+                </div>
+                <div class="search-box">
+                    <input type="text">
+                    <button class="search-btn">SEARCH</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROFILE HEADER CARD -->
+        <div class="profile-header">
+            <div class="profile-pic-side">
+                <div class="profile-pic-container">
+                    <img src="https://files.catbox.moe/codnjz.png" alt="Profile Picture">
+                </div>
+                <div class="sub-links">
+                    <a href="#">VIEW MY PICS OR YOU'LL BE SORRY YO!'</a> | <a href="#">JOIN MY LIST</a>
+                </div>
+            </div>
+
+            <div class="profile-info">
+                <div class="name-titles">
+                    <div class="krystal-ship-text">KRYSTAL<br>SHIP</div>
+                    <div class="capn-cooks-text">cap'n cooks</div>
+                </div>
+
+                <div class="stats">
+                    <p><strong>STATUS:</strong> Single, Baby, Single!</p>
+                    <p><strong>HERE FOR:</strong> Fun</p>
+                    <p><strong>BODY TYPE:</strong> I don't even know</p>
+                    <p><strong>ETHNICITY:</strong> I'm totally cool with ethnics -Black, Mexican, whatever... as long as you're SMOKIN' HOT, YO!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLLAGE -->
+        <div class="collage-section">
+            <div class="cutout cutout-ladies">
+                <span class="caption" style="top: -16px; left: 8px;">-- Me with Trump --</span>
+                <img src="https://files.catbox.moe/agvgbu.png" alt="Me with Trump">
+            </div>
+
+            <div class="cutout cutout-beanie">
+                <span class="caption" style="top: -16px; left: 8px;">-- Wii Sports Golf Selfie --</span>
+                <img src="https://files.catbox.moe/u3uo1o.png" alt="Beanie Selfie">
+            </div>
+
+            <div class="cutout cutout-skate">
+                <span class="caption" style="top: -16px; left: 8px;">-- air Bro --</span>
+                <img src="https://files.catbox.moe/pxx0vy.png" alt="Air Bro">
+            </div>
+
+            <div class="cutout cutout-armor">
+                <img src="https://files.catbox.moe/3wp49x.png" alt="Center Cutout">
+            </div>
+
+            <div class="cutout cutout-couch">
+                <span class="caption" style="top: -16px; left: 8px;">-- Setup Pic --</span>
+                <img src="https://files.catbox.moe/rgngpg.jpeg" alt="Setup Pic">
+            </div>
+
+            <div class="cutout cutout-fenix">
+                <span class="caption" style="top: -16px; left: 8px;">-- Washington Yo --</span>
+                <img src="https://files.catbox.moe/6awtv9.png" alt="Washington Yo">
+            </div>
+
+            <div class="cutout cutout-sketch">
+                <span class="caption" style="bottom: -16px; left: 8px;">-- Xbox 360 Dragon Gamerpic Art --</span>
+                <img src="https://files.catbox.moe/9u68am.jpeg" alt="Xbox 360 Dragon Gamerpic Art">
+            </div>
+
+            <div class="sticker-smokin">SMOKIN'</div>
+            <div class="sticker-lust">LUST</div>
+        </div>
+
+        <!-- BIO -->
+        <div class="bio-section">
+            <div class="bio-group">
+                <div class="bio-title">GENERAL INTERESTS:</div>
+                <div class="bio-text">
+                    Gaming of course! Call of Duty Zombies (been killin' the undead with Richtofen and ma boy SimplyBored since FOREVER). Playstation, Nintendo, Xbox and PC of course (what was the point to this?). Chilling wih my iPod Nano 3rd Gen (also filled it with a bunch of bullshit podcasts), Building websites, makin' games (I kinda left that shit for a while), animatin' stuff and generally wastin' large amounts of time on computers. Old-school tech is cool too. I prefer a Windows 7 Professional rather than my slow ass laptop. (I 360 no scoped a zombie in buired) <em> ZOMBIES, ZOMBIES, ZOMBIES, ZOMBIES!</em>
+                </div>
+
+                <div class="twaughthammer-container">
+                    <h3>Featured Music: 'Keep Ballin' by Trump'</h3>
+                    <audio controls autoplay loop controlsList="nodownload">
+                        <source src="https://files.catbox.moe/18d2mu.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
+
+            <div class="bio-group">
+                <div class="bio-title">EDUCATION:</div>
+                <div class="bio-text">
+                    Among us High School (Beluga), Kahoot Quizzes...<br>
+                    <em>The STREETS, YO!</em>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer-section">
+            <div class="footer-title">360° <span>NO SCOPE</span></div>
+            <div class="video-box">
+                <video controls controlsList="nodownload" style="width: 100%; height: 100%; object-fit: cover;">
+                    <source src="https://files.catbox.moe/324ya6.mp4#t=34" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="video-note">Don't worry, I already reached 100 subs</div>
+
+            <div class="sub-button-container">
+                <a href="https://www.youtube.com/@ShadowLucky238?sub_confirmation=1" target="_blank" class="yt-sub-btn">
+                    <svg class="yt-icon-svg" viewBox="0 0 40 28" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="ytGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#ff4d4d" />
+                                <stop offset="50%" stop-color="#cc0000" />
+                                <stop offset="100%" stop-color="#990000" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="0" y="0" width="40" height="28" rx="6" ry="6" fill="url(#ytGrad)" stroke="#770000" stroke-width="1" />
+                        <polygon points="16,8 28,14 16,20" fill="#ffffff" />
+                    </svg>
+                    Subscribe yo
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SCRIPT SECTION -->
+    <script>
+        // --- CONFIGURE YOUR SUBSCRIBER GOAL NUMBERS HERE ---
+        let currentSubs = 330;
+        let targetSubs = 500;
+
+        function updateSubGoal(current, target) {
+            const fillBar = document.getElementById('progressBarFill');
+            const progressText = document.getElementById('progressText');
+            const subGoalTitle = document.getElementById('subGoalTitle');
+            const subGoalBtn = document.getElementById('subGoalBtn');
+
+            // Calculate percentage dynamically
+            let percentage = Math.min(Math.max((current / target) * 100, 0), 100);
+
+            if (fillBar) {
+                fillBar.style.width = percentage + '%';
+            }
+            if (progressText) {
+                progressText.textContent = `GOAL: ${current} / ${target} SUBS REACHED!`;
+            }
+            if (subGoalTitle) {
+                subGoalTitle.textContent = `ROAD TO ${target} SUBSCRIBERS!`;
+            }
+            if (subGoalBtn) {
+                subGoalBtn.textContent = `HELP REACH ${target} ►`;
+            }
+        }
+
+        // Auto-run subscriber goal update on page load
+        updateSubGoal(currentSubs, targetSubs);
+
+
+        // --- RANDOMIZED AD ROTATION JAVASCRIPT ENGINE ---
+        let currentAdIndex = -1;
+        const slides = document.querySelectorAll('.ad-slide');
+        const totalAds = slides.length;
+        const rotationInterval = 60000; // 60 Seconds (1 Minute)
+
+        function showAd(index) {
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+            });
+            slides[index].classList.add('active');
+
+            // Ensure background video in active ad resets and plays
+            const currentVideo = slides[index].querySelector('video');
+            if (currentVideo) {
+                currentVideo.currentTime = 0;
+                currentVideo.play().catch(e => console.log("Autoplay prevented:", e));
+            }
+
+            currentAdIndex = index;
+        }
+
+        function showRandomAd() {
+            if (totalAds === 0) return;
+            if (totalAds === 1) {
+                showAd(0);
+                return;
+            }
+
+            let randomIndex;
+            // Pick a random ad index that is different from the currently active one
+            do {
+                randomIndex = Math.floor(Math.random() * totalAds);
+            } while (randomIndex === currentAdIndex);
+
+            showAd(randomIndex);
+        }
+
+        // Pick a random ad on page load
+        showRandomAd();
+
+        // Rotate to a random ad every minute
+        setInterval(showRandomAd, rotationInterval);
+    </script>
+
+</body>
+</html>
