@@ -262,7 +262,7 @@
             }
         }
 
-        /* ADS 4 & 5: ATTRACTIVE RETRO CYBER GRID + FLOATING PARTICLES */
+        /* RETRO CYBER GRID & PARTICLES BG */
         .ad-other-sites {
             position: relative;
             justify-content: space-between;
@@ -294,7 +294,6 @@
             }
         }
 
-        /* Floating particles glow effect */
         .particles {
             position: absolute;
             top: 0;
@@ -325,7 +324,6 @@
             gap: 2px;
         }
 
-        /* WORD-BY-WORD ANIMATION CLASSES */
         .word-drop {
             display: inline-block;
             font-family: Impact, sans-serif;
@@ -345,7 +343,6 @@
             letter-spacing: 1px;
         }
 
-        /* Ad active animations sequential delays */
         .ad-slide.active .top-w1 {
             animation: popIn 0.3s forwards ease-out 0.1s;
         }
@@ -439,7 +436,6 @@
             animation: mouseClickFar 4s infinite ease-in-out 1.6s;
         }
 
-        /* Mouse cursor trajectory animation */
         @keyframes mouseClickFar {
             0% {
                 opacity: 0;
@@ -472,6 +468,38 @@
                 opacity: 0;
                 transform: translate(-60px, -60px) scale(1);
             }
+        }
+
+        /* NEW CUSTOM ADS 6, 7 & 8 STYLES */
+        .ad-discord {
+            background: radial-gradient(circle, #3b42a0 0%, #0f1128 100%);
+        }
+
+        .ad-clip {
+            background: radial-gradient(circle, #661100 0%, #1a0000 100%);
+        }
+
+        .ad-motd {
+            background: radial-gradient(circle, #003311 0%, #000a03 100%);
+        }
+
+        .discord-status-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #23a55a;
+            border-radius: 50%;
+            margin-right: 5px;
+            box-shadow: 0 0 8px #23a55a;
+        }
+
+        .motd-terminal {
+            font-family: 'Courier New', Courier, monospace;
+            color: #00ff66;
+            font-size: 16px;
+            font-weight: bold;
+            text-shadow: 0 0 5px #00ff66;
+            letter-spacing: 0.5px;
         }
 
         /* ADVERTISING TAG */
@@ -1146,11 +1174,11 @@
 
     <div class="wrapper">
 
-        <!-- LOCAL HTML5 VIDEO AD BANNER SYSTEM -->
+        <!-- LOCAL HTML5 VIDEO & CUSTOM AD BANNER ROTATION SYSTEM (9 TOTAL ADS) -->
         <div class="top-ad-container">
             <div class="ad-tag">Advertisment cuz idk what else to add</div>
 
-            <!-- AD 1 -->
+            <!-- AD 1: ULTIMATE GAMING CLIPS -->
             <a href="https://www.youtube.com/@ShadowLucky238?sub_confirmation=1" target="_blank" class="ad-slide ad-1">
                 <video class="ad-bg-video" autoplay muted loop playsinline>
                     <source src="https://files.catbox.moe/324ya6.mp4" type="video/mp4">
@@ -1164,7 +1192,7 @@
                 </div>
             </a>
 
-            <!-- AD 2 -->
+            <!-- AD 2: ROAD TO 500 SUBS -->
             <a href="https://www.youtube.com/@ShadowLucky238?sub_confirmation=1" target="_blank" class="ad-slide ad-2">
                 <video class="ad-bg-video" autoplay muted loop playsinline>
                     <source src="https://files.catbox.moe/ywc81s.mp4" type="video/mp4">
@@ -1181,7 +1209,7 @@
                 </div>
             </a>
 
-            <!-- AD 3 -->
+            <!-- AD 3: SHOUT-OUT SPOTLIGHT -->
             <a href="https://www.youtube.com/@ShadowLucky238?sub_confirmation=1" target="_blank" class="ad-slide ad-3">
                 <video class="ad-bg-video" autoplay muted loop playsinline>
                     <source src="https://files.catbox.moe/zf4z8i.mp4" type="video/mp4">
@@ -1223,7 +1251,6 @@
                     </div>
                     <div class="btn-wrapper">
                         <div class="slide-up-btn">TRY IT! ►</div>
-                        <!-- Animated SVG Mouse Cursor -->
                         <svg class="anim-cursor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 3L10.07 19.97L12.58 12.58L19.97 10.07L3 3Z" fill="#ffffff" stroke="#000000" stroke-width="2" />
                         </svg>
@@ -1255,13 +1282,77 @@
                     </div>
                     <div class="btn-wrapper">
                         <div class="slide-up-btn" style="background: #00cc66; color: #fff;">TRY IT! ►</div>
-                        <!-- Animated SVG Mouse Cursor -->
                         <svg class="anim-cursor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 3L10.07 19.97L12.58 12.58L19.97 10.07L3 3Z" fill="#ffffff" stroke="#000000" stroke-width="2" />
                         </svg>
                     </div>
                 </div>
             </a>
+
+            <!-- AD 6: DISCORD SERVER PROMO -->
+            <a href="https://discord.gg/2SHNTHFCQS" target="_blank" class="ad-slide ad-other-sites ad-discord">
+                <div class="cyber-grid-bg"></div>
+                <div class="particles"></div>
+                <div class="ad1-content">
+                    <div class="ad3-text">
+                        <div class="ad3-badge" style="background: #5865F2; color: #fff;"><span class="discord-status-dot"></span>OFFICIAL COMMUNITY DISCORD</div>
+                        <div class="ad3-title-container">
+                            <div class="ad3-title" style="color: #7289da; text-shadow: 2px 2px #000;">💬 CHILL WITH THE SQUAD ON DISCORD!</div>
+                        </div>
+                        <div class="sub-public-note" style="color: #fff;">Talk gaming, share your clips & hang out in the server!</div>
+                    </div>
+                    <div class="ad-btn-retro" style="background: linear-gradient(to bottom, #5865F2, #3b42a0); color: #fff; border-color: #7289da;">JOIN SERVER ►</div>
+                </div>
+            </a>
+
+            <!-- AD 7: CLIP OF THE WEEK (ADD YOUR VIDEO/LINK IN THE SOURCE) -->
+            <a href="https://youtu.be/0wLby7SHVJ8?si=gZpO8aIH0KZTbCog" target="_blank" class="ad-slide ad-other-sites ad-clip">
+                <!-- Add your clip background video below if desired -->
+                <video class="ad-bg-video" autoplay muted loop playsinline><source src="https://files.catbox.moe/5pmsh2.mp4" type="video/mp4"></video>
+                <div class="cyber-grid-bg"></div>
+                <div class="particles"></div>
+                <div class="ad1-content">
+                    <div class="ad3-text">
+                        <div class="ad3-badge" style="background: #ff5500; color: #fff;">🔥 FEATURED HIGHLIGHT</div>
+                        <div class="ad3-title-container">
+                            <div class="ad3-title" style="color: #ffaa00; text-shadow: 2px 2px #000;">FEATURED CLIP OF THE WEEK!</div>
+                        </div>
+                        <div class="sub-public-note" style="color: #fff;">Check out this crazy gameplay highlight!</div>
+                    </div>
+                    <div class="ad-btn-retro" style="background: linear-gradient(to bottom, #ff9900, #cc5500); color: #fff; border-color: #ffaa00;">WATCH CLIP ►</div>
+                </div>
+            </a>
+
+            <!-- AD 8: MESSAGE OF THE DAY (MOTD) -->
+                <div class="ad-slide ad-other-sites ad-motd" style="cursor: default;">
+                    <div class="cyber-grid-bg"></div>
+                    <div class="particles"></div>
+                    <div class="ad1-content">
+                        <div class="ad3-text">
+                            <div class="ad3-badge" style="background: #00ff66; color: #000;">📢 MESSAGE OF THE DAY</div>
+                            <div class="motd-terminal">
+                                > "I'm telling you man, kinder chocolates are the best"
+                            </div>
+                        </div>
+                        <div class="ad-btn-retro" style="background: #003311; color: #00ff66; border-color: #00ff66;">Hi!</div>
+                    </div>
+                </div>
+
+                <!-- AD 9: SECOND MOTD / BONUS HOUSE BANNER -->
+                <a href="https://www.youtube.com/@ShadowLucky238?sub_confirmation=1" target="_blank" class="ad-slide ad-other-sites">
+                    <div class="cyber-grid-bg"></div>
+                    <div class="particles"></div>
+                    <div class="ad1-content">
+                        <div class="ad3-text">
+                            <div class="ad3-badge" style="background: #ff007f; color: #fff;">⚡ myShadowLucky238.US</div>
+                            <div class="ad3-title-container">
+                                <div class="ad3-title" style="color: #00ffff; text-shadow: 2px 2px #ff007f;">WELCOME TO THE OFFICIAL HUB!</div>
+                            </div>
+                            <div class="sub-public-note" style="color: #fff;">Bookmark this site for frequent gaming drops & updates!</div>
+                        </div>
+                        <div class="ad-btn-retro" style="background: linear-gradient(to bottom, #ff007f, #99004d); color: #fff; border-color: #ff007f;">ALSO SUBSCRIBE PLS ►</div>
+                    </div>
+                </a>
         </div>
 
         <!-- HEADER -->
@@ -1436,11 +1527,11 @@
         updateSubGoal(currentSubs, targetSubs);
 
 
-        // --- RANDOMIZED AD ROTATION JAVASCRIPT ENGINE ---
+        // --- RANDOMIZED 9-AD ROTATION JAVASCRIPT ENGINE ---
         let currentAdIndex = -1;
         const slides = document.querySelectorAll('.ad-slide');
         const totalAds = slides.length;
-        const rotationInterval = 60000; // 60 Seconds (1 Minute)
+        const rotationInterval = 60000; // 60 Seconds (1 Minute) Per Ad
 
         function showAd(index) {
             slides.forEach((slide) => {
@@ -1477,4 +1568,4 @@
     </script>
 
 </body>
-</html>
+</html> 
