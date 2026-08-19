@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myShadowLucky238.us - Cap'n Cook's Krystal Ship</title>
+    <title>myShadowLucky238.COM - Cap'n Cook's Krystal Ship</title>
 
     <!-- WEBSITE FAVICON / TAB LOGO -->
     <link rel="icon" type="image/png" href="https://files.catbox.moe/9cs870.png">
@@ -58,9 +58,9 @@
             color: #fff;
         }
 
-        .ad-slide.active {
-            display: flex;
-        }
+            .ad-slide.active {
+                display: flex;
+            }
 
         .ad-bg-video {
             position: absolute;
@@ -249,9 +249,229 @@
         }
 
         @keyframes spinWow {
-            0% { transform: rotate(0deg) scale(1); }
-            50% { transform: rotate(180deg) scale(1.2); }
-            100% { transform: rotate(360deg) scale(1); }
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(180deg) scale(1.2);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        /* ADS 4 & 5: ATTRACTIVE RETRO CYBER GRID + FLOATING PARTICLES */
+        .ad-other-sites {
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: radial-gradient(circle, #2a004f 0%, #080018 100%);
+            overflow: hidden;
+        }
+
+        .cyber-grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right, rgba(255, 0, 128, 0.3) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 255, 255, 0.3) 1px, transparent 1px);
+            background-size: 24px 24px;
+            animation: gridMove 4s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes gridMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 24px 24px;
+            }
+        }
+
+        /* Floating particles glow effect */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(2px 2px at 20px 30px, #00ffff, rgba(0,0,0,0)), radial-gradient(2px 2px at 150px 70px, #ff007f, rgba(0,0,0,0)), radial-gradient(2px 2px at 300px 20px, #ffe600, rgba(0,0,0,0)), radial-gradient(2px 2px at 450px 80px, #00ffcc, rgba(0,0,0,0)), radial-gradient(2px 2px at 600px 40px, #ff0055, rgba(0,0,0,0)), radial-gradient(2px 2px at 750px 60px, #00ffff, rgba(0,0,0,0));
+            animation: particleGlow 2s infinite alternate ease-in-out;
+            pointer-events: none;
+        }
+
+        @keyframes particleGlow {
+            0% {
+                opacity: 0.3;
+                transform: scale(0.98);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1.02);
+            }
+        }
+
+        .ad-stacked-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+        }
+
+        /* WORD-BY-WORD ANIMATION CLASSES */
+        .word-drop {
+            display: inline-block;
+            font-family: Impact, sans-serif;
+            font-size: 18px;
+            color: #fff;
+            opacity: 0;
+            transform: translateY(-20px) scale(0.8);
+        }
+
+        .word-title {
+            display: inline-block;
+            font-family: Impact, sans-serif;
+            font-size: 22px;
+            opacity: 0;
+            transform: translateY(-20px) scale(0.8);
+            text-shadow: 2px 2px 0px #000;
+            letter-spacing: 1px;
+        }
+
+        /* Ad active animations sequential delays */
+        .ad-slide.active .top-w1 {
+            animation: popIn 0.3s forwards ease-out 0.1s;
+        }
+
+        .ad-slide.active .top-w2 {
+            animation: popIn 0.3s forwards ease-out 0.25s;
+        }
+
+        .ad-slide.active .top-w3 {
+            animation: popIn 0.3s forwards ease-out 0.4s;
+        }
+
+        .ad-slide.active .bot-w1 {
+            animation: popIn 0.3s forwards ease-out 0.55s;
+        }
+
+        .ad-slide.active .bot-w2 {
+            animation: popIn 0.3s forwards ease-out 0.7s;
+        }
+
+        .ad-slide.active .title-w1 {
+            animation: popIn 0.3s forwards ease-out 0.85s;
+        }
+
+        .ad-slide.active .title-w2 {
+            animation: popIn 0.3s forwards ease-out 1.0s;
+        }
+
+        .ad-slide.active .title-w3 {
+            animation: popIn 0.3s forwards ease-out 1.15s;
+        }
+
+        .ad-slide.active .title-w4 {
+            animation: popIn 0.3s forwards ease-out 1.3s;
+        }
+
+        @keyframes popIn {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .ad-middle-title {
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .btn-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        .slide-up-btn {
+            display: inline-block;
+            font-family: Impact, sans-serif;
+            font-size: 20px;
+            color: #00ffff;
+            background: #ff0055;
+            padding: 6px 16px;
+            border: 2px solid #fff;
+            box-shadow: 3px 3px 0px #000;
+            opacity: 0;
+            transform: translateY(25px);
+        }
+
+        .ad-slide.active .slide-up-btn {
+            animation: slideUp 0.4s forwards ease-out 1.45s;
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .anim-cursor {
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            opacity: 0;
+            pointer-events: none;
+            filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.8));
+        }
+
+        .ad-slide.active .anim-cursor {
+            animation: mouseClickFar 4s infinite ease-in-out 1.6s;
+        }
+
+        /* Mouse cursor trajectory animation */
+        @keyframes mouseClickFar {
+            0% {
+                opacity: 0;
+                transform: translate(380px, 90px) scale(1);
+            }
+
+            15% {
+                opacity: 1;
+                transform: translate(300px, 70px) scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translate(35px, 12px) scale(1);
+            }
+
+            60% {
+                transform: translate(35px, 12px) scale(0.75);
+            }
+
+            70% {
+                transform: translate(35px, 12px) scale(1);
+            }
+
+            88% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(-60px, -60px) scale(1);
+            }
         }
 
         /* ADVERTISING TAG */
@@ -285,10 +505,10 @@
             font-weight: bold;
         }
 
-        .header-top a {
-            color: #000;
-            text-decoration: none;
-        }
+            .header-top a {
+                color: #000;
+                text-decoration: none;
+            }
 
         .header-main {
             display: flex;
@@ -304,10 +524,10 @@
             line-height: 1;
         }
 
-        .logo span {
-            font-size: 44px;
-            text-transform: uppercase;
-        }
+            .logo span {
+                font-size: 44px;
+                text-transform: uppercase;
+            }
 
         .tagline {
             font-size: 12px;
@@ -322,12 +542,12 @@
             gap: 4px;
         }
 
-        .search-box input[type="text"] {
-            width: 240px;
-            padding: 4px 6px;
-            border: 1px solid #777;
-            background-color: #fff;
-        }
+            .search-box input[type="text"] {
+                width: 240px;
+                padding: 4px 6px;
+                border: 1px solid #777;
+                background-color: #fff;
+            }
 
         .search-btn {
             background-color: #000;
@@ -365,11 +585,11 @@
             overflow: hidden;
         }
 
-        .profile-pic-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+            .profile-pic-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
 
         .sub-links {
             margin-top: 6px;
@@ -378,10 +598,10 @@
             text-align: center;
         }
 
-        .sub-links a {
-            color: #888;
-            text-decoration: none;
-        }
+            .sub-links a {
+                color: #888;
+                text-decoration: none;
+            }
 
         .profile-info {
             flex: 1;
@@ -427,15 +647,15 @@
             margin-top: 5px;
         }
 
-        .stats p {
-            margin-bottom: 4px;
-        }
+            .stats p {
+                margin-bottom: 4px;
+            }
 
-        .stats strong {
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
+            .stats strong {
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
 
         /* COLLAGE SECTION */
         .collage-section {
@@ -453,12 +673,12 @@
             background-color: #111;
         }
 
-        .cutout img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+            .cutout img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
 
         .caption {
             position: absolute;
@@ -579,9 +799,9 @@
             margin-bottom: 18px;
         }
 
-        .bio-group:last-child {
-            margin-bottom: 0;
-        }
+            .bio-group:last-child {
+                margin-bottom: 0;
+            }
 
         .bio-title {
             font-size: 20px;
@@ -607,14 +827,14 @@
             max-width: 100%;
         }
 
-        .twaughthammer-container h3 {
-            font-size: 11px;
-            font-weight: 900;
-            font-family: Impact, sans-serif;
-            color: red;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-        }
+            .twaughthammer-container h3 {
+                font-size: 11px;
+                font-weight: 900;
+                font-family: Impact, sans-serif;
+                color: red;
+                text-transform: uppercase;
+                margin-bottom: 4px;
+            }
 
         audio {
             width: 100%;
@@ -641,11 +861,11 @@
             display: inline-block;
         }
 
-        .footer-title span {
-            background-color: #fff;
-            color: #000;
-            padding: 0 8px;
-        }
+            .footer-title span {
+                background-color: #fff;
+                color: #000;
+                padding: 0 8px;
+            }
 
         .video-box {
             width: 100%;
@@ -695,10 +915,10 @@
             cursor: pointer;
         }
 
-        .yt-sub-btn:hover {
-            background: linear-gradient(to bottom, #f0f0f0 0%, #d9d9d9 50%, #bfbfbf 100%);
-            color: #000;
-        }
+            .yt-sub-btn:hover {
+                background: linear-gradient(to bottom, #f0f0f0 0%, #d9d9d9 50%, #bfbfbf 100%);
+                color: #000;
+            }
 
         .yt-icon-svg {
             height: 20px;
@@ -718,7 +938,6 @@
                 border: none;
             }
 
-            /* AD BANNERS */
             .top-ad-container {
                 height: 110px;
             }
@@ -765,7 +984,19 @@
                 padding: 1px 5px;
             }
 
-            /* HEADER */
+            .word-drop {
+                font-size: 13px;
+            }
+
+            .word-title {
+                font-size: 15px;
+            }
+
+            .slide-up-btn {
+                font-size: 15px;
+                padding: 4px 10px;
+            }
+
             .header-main {
                 flex-direction: column;
                 align-items: flex-start;
@@ -776,20 +1007,19 @@
                 font-size: 26px;
             }
 
-            .logo span {
-                font-size: 28px;
-            }
+                .logo span {
+                    font-size: 28px;
+                }
 
             .search-box {
                 width: 100%;
                 align-items: stretch;
             }
 
-            .search-box input[type="text"] {
-                width: 100%;
-            }
+                .search-box input[type="text"] {
+                    width: 100%;
+                }
 
-            /* PROFILE HEADER */
             .profile-header {
                 flex-direction: column;
                 align-items: center;
@@ -829,7 +1059,6 @@
                 font-size: 12px;
             }
 
-            /* COLLAGE SECTION */
             .collage-section {
                 height: auto;
                 min-height: auto;
@@ -851,10 +1080,10 @@
                 height: auto !important;
             }
 
-            .cutout img {
-                width: 100%;
-                height: auto;
-            }
+                .cutout img {
+                    width: 100%;
+                    height: auto;
+                }
 
             .cutout-armor {
                 order: 1;
@@ -862,12 +1091,29 @@
                 height: auto !important;
             }
 
-            .cutout-ladies { order: 2; }
-            .cutout-beanie { order: 3; }
-            .cutout-skate { order: 4; }
-            .cutout-couch { order: 5; }
-            .cutout-fenix { order: 6; }
-            .cutout-sketch { order: 7; }
+            .cutout-ladies {
+                order: 2;
+            }
+
+            .cutout-beanie {
+                order: 3;
+            }
+
+            .cutout-skate {
+                order: 4;
+            }
+
+            .cutout-couch {
+                order: 5;
+            }
+
+            .cutout-fenix {
+                order: 6;
+            }
+
+            .cutout-sketch {
+                order: 7;
+            }
 
             .sticker-smokin, .sticker-lust {
                 position: relative !important;
@@ -878,10 +1124,14 @@
                 margin: 5px 0;
             }
 
-            .sticker-smokin { order: 1; }
-            .sticker-lust { order: 8; }
+            .sticker-smokin {
+                order: 1;
+            }
 
-            /* FOOTER */
+            .sticker-lust {
+                order: 8;
+            }
+
             .footer-title {
                 font-size: 32px;
             }
@@ -946,6 +1196,70 @@
                         <div class="sub-public-note">💡 Make sure your subscriptions are set to <b>PUBLIC</b> so I can put you on the site!</div>
                     </div>
                     <div class="ad-btn-retro" style="background: linear-gradient(to bottom, #ffe600, #ff9900); color: #000; border-color: #ffff00;">SUBSCRIBE NOW ►</div>
+                </div>
+            </a>
+
+            <!-- AD 4: LASER SOCK 4000 -->
+            <a href="https://nolan201.github.io/Laser-Sock-4000/" target="_blank" class="ad-slide ad-other-sites">
+                <div class="cyber-grid-bg"></div>
+                <div class="particles"></div>
+                <div class="ad1-content">
+                    <div class="ad-stacked-content">
+                        <div>
+                            <span class="word-drop top-w1">TRY</span>
+                            <span class="word-drop top-w2">MY</span>
+                            <span class="word-drop top-w3">OTHER</span>
+                        </div>
+                        <div>
+                            <span class="word-drop bot-w1">WEBSITES</span>
+                            <span class="word-drop bot-w2">LIKE...</span>
+                        </div>
+                    </div>
+                    <div class="ad-middle-title">
+                        <span class="word-title title-w1" style="color: #ff007f;">🎮 LASER</span>
+                        <span class="word-title title-w2" style="color: #ff007f;">SOCK</span>
+                        <span class="word-title title-w3" style="color: #ff007f;">4000</span>
+                        <span class="word-title title-w4" style="color: #ff007f;">GAME!</span>
+                    </div>
+                    <div class="btn-wrapper">
+                        <div class="slide-up-btn">TRY IT! ►</div>
+                        <!-- Animated SVG Mouse Cursor -->
+                        <svg class="anim-cursor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 3L10.07 19.97L12.58 12.58L19.97 10.07L3 3Z" fill="#ffffff" stroke="#000000" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+
+            <!-- AD 5: MY HALL OF FAME -->
+            <a href="https://nolan201.github.io/My-hall-of-fame-website/" target="_blank" class="ad-slide ad-other-sites">
+                <div class="cyber-grid-bg"></div>
+                <div class="particles"></div>
+                <div class="ad1-content">
+                    <div class="ad-stacked-content">
+                        <div>
+                            <span class="word-drop top-w1">TRY</span>
+                            <span class="word-drop top-w2">MY</span>
+                            <span class="word-drop top-w3">OTHER</span>
+                        </div>
+                        <div>
+                            <span class="word-drop bot-w1">WEBSITES</span>
+                            <span class="word-drop bot-w2">LIKE...</span>
+                        </div>
+                    </div>
+                    <div class="ad-middle-title">
+                        <span class="word-title title-w1" style="color: #ffe600;">🏆 MY</span>
+                        <span class="word-title title-w2" style="color: #ffe600;">HALL</span>
+                        <span class="word-title title-w3" style="color: #ffe600;">OF</span>
+                        <span class="word-title title-w4" style="color: #ffe600;">FAME!</span>
+                    </div>
+                    <div class="btn-wrapper">
+                        <div class="slide-up-btn" style="background: #00cc66; color: #fff;">TRY IT! ►</div>
+                        <!-- Animated SVG Mouse Cursor -->
+                        <svg class="anim-cursor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 3L10.07 19.97L12.58 12.58L19.97 10.07L3 3Z" fill="#ffffff" stroke="#000000" stroke-width="2" />
+                        </svg>
+                    </div>
                 </div>
             </a>
         </div>
@@ -1103,7 +1417,6 @@
             const subGoalTitle = document.getElementById('subGoalTitle');
             const subGoalBtn = document.getElementById('subGoalBtn');
 
-            // Calculate percentage dynamically
             let percentage = Math.min(Math.max((current / target) * 100, 0), 100);
 
             if (fillBar) {
@@ -1120,7 +1433,6 @@
             }
         }
 
-        // Auto-run subscriber goal update on page load
         updateSubGoal(currentSubs, targetSubs);
 
 
@@ -1136,7 +1448,6 @@
             });
             slides[index].classList.add('active');
 
-            // Ensure background video in active ad resets and plays
             const currentVideo = slides[index].querySelector('video');
             if (currentVideo) {
                 currentVideo.currentTime = 0;
@@ -1154,7 +1465,6 @@
             }
 
             let randomIndex;
-            // Pick a random ad index that is different from the currently active one
             do {
                 randomIndex = Math.floor(Math.random() * totalAds);
             } while (randomIndex === currentAdIndex);
@@ -1162,10 +1472,7 @@
             showAd(randomIndex);
         }
 
-        // Pick a random ad on page load
         showRandomAd();
-
-        // Rotate to a random ad every minute
         setInterval(showRandomAd, rotationInterval);
     </script>
 
