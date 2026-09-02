@@ -8,6 +8,6 @@ This is a fan made site of the original website of Jesse Pinkman's myshout (from
 
 3. If you are opening the website on your phone make sure to set the zoom to 75%
 
-# I hope you understood and if you are making a video or just visiting the site by yourself, it will really help me a lot if you subscribed to my YY channel
+# I hope you understood and if you are making a video or just visiting the site by yourself, it will really help me a lot if you subscribed to my YT channel
 
 # Now go have fun :)
